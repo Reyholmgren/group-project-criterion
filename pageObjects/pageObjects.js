@@ -8,18 +8,18 @@ module.exports = {
             locateStrategy:'xpath'
         },
         'spine2':{
-            selector:'td[@class="g-spine"])[2]',
+            selector:'(//td[@class="g-spine"])[2]',
             locateStrategy:'xpath'
         },
         'spine3':{
-            selector:'td[@class="g-spine"])[3]',
+            selector:'(//td[@class="g-spine"])[3]',
             locateStrategy:'xpath'
         },
         'spine4':{
-            selector:'td[@class="g-spine"])[4]',
+            selector:'(//td[@class="g-spine"])[4]',
             locateStrategy:'xpath'
         },
-        'addToWishBtn' : 'button[type="button"]',
+        'outOfPrintWishList' : 'button[type="button"]',
         //'button[class="button__secondary"]',
         'homeBtn' : 'a[class="homelink"]',
         'shopTitle' : 'h1[class="header__primarytitlealt "]',
@@ -28,13 +28,14 @@ module.exports = {
         'accountHeader' : 'h1[class="myaccount__header_title"]',
         'menuBtn' : 'svg[class="burger"]',
         'yourAccount':{
-            selector: '//a[@href="https://www.criterion.com/account"])[2]',
+            selector: '(//a[@href="https://www.criterion.com/account"])[2]',
             locateStrategy:'xpath'
         },
         'emailIn' : 'input[name="email"]',
         'passwordIn' : 'input[name="password"]',
         'signIn' : 'button[type="submit"]',
         'sideBar' : 'div[class="global-nav__sidebar"]',
-        'signInPage' : 'div[class="content"]'
+        'signInPage' : 'div[class="content"]',
+        'wishListBtn' : 'button[class="button__secondary"]'
     }
 }
