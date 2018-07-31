@@ -62,5 +62,15 @@ module.exports = {
             selector: ('//td[contains(text(),"1921")]'),
             locateStrategy:'xpath'
         },
+        'directorAkerman':{
+            selector:   ('//td[contains(text(),"Chantal Akerman")]'),
+            locateStrategy:'xpath'
+        },
+        'logoutBtn' : 'a[href="#"]',
+        'homeHeader':{
+            selector:  ('//h1[text()="The Criterion Store"]'),
+            locateStrategy:'xpath'
+        },
+       
     }
 }

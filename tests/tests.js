@@ -113,6 +113,38 @@ module.exports = {
         pageObjects
             .waitForElementVisible('@year1921', 15000)          
 
+    },
+
+    'search all by director check': browser => {
+        let pageObjects = browser.page.pageObjects()
+        pageObjects          
+            .click('@homeBtn') 
+            .click('@shopBtn')
+            .expect.element('@shopTitle').text.to.equal('Shop the Collection')
+        pageObjects
+            .click('@allFilms') 
+            .expect.element('@shopAllTitle').text.to.equal('SHOP ALL FILMS') 
+        pageObjects
+            .click('select[class="filterbut"] option[value="sort_director"]')
+        browser.pause(5000)
+        pageObjects
+            .waitForElementVisible('@directorAkerman', 15000)          
+
+    },
+
+
+
+
+
+
+    'logout check': browser => {
+        let pageObjects = browser.page.pageObjects()
+        pageObjects          
+            .click('@logoutBtn') 
+            .waitForElementVisible('@homeHeader', 15000)  
+        browser.pause(5000)        
+
     }
+
 
 }
