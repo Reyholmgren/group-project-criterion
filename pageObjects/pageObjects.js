@@ -1,5 +1,5 @@
 module.exports = {
-    url: 'https://cards-beta.devclock.com/',
+    url: 'https://www.criterion.com/',
     elements: {
         'shopBtn' : 'a[href="https://www.criterion.com/shop"]',
         'allFilms' : 'h3[class="header_lvl2 tussock"]',
@@ -36,6 +36,31 @@ module.exports = {
         'signIn' : 'button[type="submit"]',
         'sideBar' : 'div[class="global-nav__sidebar"]',
         'signInPage' : 'div[class="content"]',
-        'wishListBtn' : 'button[class="button__secondary"]'
+        'wishListBtn' : 'button[class="button__secondary"]',
+        'accountWishList' : 'a[href="https://www.criterion.com/account/wishlist"]',
+        'grandIllusionTitle' : 'a[href="https://www.criterion.com/films/351-grand-illusion"]',
+        'wishListRemove1':{
+            selector: '(//button[@class="wishlist-remove"])[1]',
+            locateStrategy:'xpath'
+        },
+        'wishListRemove2':{
+            selector: '(//button[@class="wishlist-remove"])[2]',
+            locateStrategy:'xpath'
+        },
+        'wishListRemove3':{
+            selector: '(//button[@class="wishlist-remove"])[3]',
+            locateStrategy:'xpath'
+        },
+        'wishListRemove4':{
+            selector: '(//button[@class="wishlist-remove"])[4]',
+            locateStrategy:'xpath'
+        },
+
+        'filterBtn' : 'button[class="store-filter filterbut"]',
+        'sortByBtn' : 'select[class="filterbut"]',
+        'year1921':{
+            selector: ('//td[contains(text(),"1921")]'),
+            locateStrategy:'xpath'
+        },
     }
 }
