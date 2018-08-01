@@ -71,6 +71,15 @@ module.exports = {
             selector:  ('//h1[text()="The Criterion Store"]'),
             locateStrategy:'xpath'
         },
-       
+
+        //Erik's selectors
+        'filterButton': 'div[class="store__filters-filter"]',
+        'avantGarde': 'label[for="filter-genre-avant-garde"]',
+        'applyButton': 'button[class="linkbut_sm_tussock is-apply-button"]',
+        'resultsNumber': 'span[class="results"]',
+        'resetButton': 'button[class="linkbut_sm_wildsand is-reset-button"]',
+        'wesAnderson': 'label[for="filter-director-anderson-wes"]',
+        'OOP': 'label[for="filter-popular-out-of-print"]',
+        'bluray': 'label[for="filter-format-blu-ray"]'
     }
 }
