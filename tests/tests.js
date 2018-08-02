@@ -147,10 +147,36 @@ module.exports = {
         pageObjects
             .click('@addToCartBtn')
             .waitForElementPresent('@viewCart', 5000)
+            browser.pause(5000)    
+
+        pageObjects.click('@viewCart')
+            .waitForElementVisible('@cartHeader', 15000)
+        pageObjects          
+            .click('@homeBtn') 
+            .click('@shopBtn')
+        .expect.element('@shopTitle').text.to.equal('Shop the Collection')
+        pageObjects
+            .click('@allFilms') 
+            .expect.element('@shopAllTitle').text.to.equal('SHOP ALL FILMS') 
+         pageObjects
+            .click('@spine3')
+            .expect.element('@movieTitle').to.be.visible.before(5000)
+        pageObjects
+            .click('@addToCartBtn')
+            .waitForElementPresent('@viewCart', 5000)
             browser.pause(5000)        
             pageObjects.click('@viewCart')
-            .waitForElementVisible('@cartHeader', 15000)          
-
+            .waitForElementVisible('@cartHeader', 15000)
+        pageObjects
+            .clearValue('@cartQuantityInput')
+            .setValue('@cartQuantityInput', '5')
+            .click('@quantityUpdate')
+            browser.pause(2500)
+        pageObjects
+            .clearValue('@cartQuantityInput')
+            .setValue('@cartQuantityInput', '1')
+            .click('@quantityUpdate')
+            browser.pause(10000)
     },
 
 

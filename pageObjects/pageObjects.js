@@ -84,7 +84,11 @@ module.exports = {
         'resetButton' : 'button[class="linkbut_sm_wildsand is-reset-button"]',
         'wesAnderson' : 'label[for="filter-director-anderson-wes"]',
         'OOP' : 'label[for="filter-popular-out-of-print"]',
-        'bluray' : 'label[for="filter-format-blu-ray"]'
+        'bluray' : 'label[for="filter-format-blu-ray"]',
+        'cartQuantityInput' : 'input[class="cart-quantity"]',
+        'quantityUpdate' : 'button[name="update"]',
+        
+
        
     }
 }
