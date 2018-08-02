@@ -42,10 +42,10 @@ module.exports = {
         pageObjects 
             .click('@spine2') 
         pageObjects 
-            .expect.element('@movieTitle').to.be.visible.before(5000)
+            .expect.element('@movieTitle').to.be.visible.before(10000)
         pageObjects 
             .click('@wishListBtn') 
-            .expect.element('@accountHeader').to.be.visible.before(5000) 
+            .expect.element('@accountHeader').to.be.visible.before(10000) 
         
         //spine3
         pageObjects             
@@ -131,10 +131,68 @@ module.exports = {
             .waitForElementVisible('@directorAkerman', 15000)          
 
     },
+    
+    'shopping cart add check': browser => {
+        let pageObjects = browser.page.pageObjects()
+        pageObjects          
+            .click('@homeBtn') 
+            .click('@shopBtn')
+        .expect.element('@shopTitle').text.to.equal('Shop the Collection')
+         pageObjects
+            .click('@allFilms') 
+            .expect.element('@shopAllTitle').text.to.equal('SHOP ALL FILMS') 
+         pageObjects
+            .click('@spine2')
+            .expect.element('@movieTitle').to.be.visible.before(5000)
+        pageObjects
+            .click('@addToCartBtn')
+            .waitForElementPresent('@viewCart', 5000)
+            browser.pause(5000)        
+            pageObjects.click('@viewCart')
+            .waitForElementVisible('@cartHeader', 15000)          
+
+    },
 
 
-
-
+    'Filters': browser => {
+        let pageObjects = browser.page.pageObjects()
+        // Setting preconditions
+        browser.url('https://www.criterion.com/shop/browse/list?sort=spine_number')
+        //    Avant-Garde Filter
+        pageObjects
+            .click('@filterButton')
+            .click('@avantGarde')
+            .click('@applyButton')
+            .waitForElementNotPresent('img[alt="Grand Illusion"]', 1000)
+        pageObjects
+            .expect.element('@resultsNumber').text.to.equal("9 RESULTS")
+        // Wes Anderson Filter
+        pageObjects
+            .click('@filterButton')
+            .click('@resetButton')
+            .click('@wesAnderson')
+            .click('@applyButton')
+            .waitForElementNotPresent('img[alt="Eraserhead"', 1000)
+        pageObjects
+            .expect.element('@resultsNumber').text.to.equal("8 RESULTS")
+        // OOP Filter
+        pageObjects
+            .click('@filterButton')
+            .click('@resetButton')
+            .click('@OOP')
+            .click('@applyButton')
+            .waitForElementNotPresent('img[alt="Rushmore"', 1000)
+        pageObjects
+            .expect.element('@resultsNumber').text.to.equal("108 RESULTS")
+        // OOP Bluray only Filter
+        pageObjects
+            .click('@filterButton')
+            .click('@bluray')
+            .click('@applyButton')
+            .waitForElementNotPresent('img[alt="Grand Illusion"]', 1000)
+        pageObjects
+            .expect.element('@resultsNumber').text.to.equal("9 RESULTS")
+    },
 
 
     'logout check': browser => {
