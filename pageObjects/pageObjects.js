@@ -72,6 +72,7 @@ module.exports = {
             locateStrategy:'xpath'
         },
 
+<<<<<<< HEAD
         'addToCartBtn' : 'button[class="button__primary"]',
         'viewCart' : 'a[href="https://www.criterion.com/shop/cart"]', 
         'checkoutBtn' : 'a[class="linkbut_green"]',
@@ -86,5 +87,16 @@ module.exports = {
         'OOP' : 'label[for="filter-popular-out-of-print"]',
         'bluray' : 'label[for="filter-format-blu-ray"]'
        
+=======
+        //Erik's selectors
+        'filterButton': 'div[class="store__filters-filter"]',
+        'avantGarde': 'label[for="filter-genre-avant-garde"]',
+        'applyButton': 'button[class="linkbut_sm_tussock is-apply-button"]',
+        'resultsNumber': 'span[class="results"]',
+        'resetButton': 'button[class="linkbut_sm_wildsand is-reset-button"]',
+        'wesAnderson': 'label[for="filter-director-anderson-wes"]',
+        'OOP': 'label[for="filter-popular-out-of-print"]',
+        'bluray': 'label[for="filter-format-blu-ray"]'
+>>>>>>> 9dffc69eaa456121a9fb3d327739f0101227521d
     }
 }
