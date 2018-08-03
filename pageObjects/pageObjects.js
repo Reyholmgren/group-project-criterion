@@ -75,8 +75,9 @@ module.exports = {
         'addToCartBtn' : 'button[class="button__primary"]',
         'viewCart' : 'a[href="https://www.criterion.com/shop/cart"]', 
         'checkoutBtn' : 'a[class="linkbut_green"]',
-        'cartHeader' : 'h1[class="header__secondary__gothamnarrowbold"]',
-
+        'cartHeader' : 'a[href="https://www.criterion.com/shop/cart"]',
+        'quantity5' : 'input[value="5"]',
+        'quantity1' : 'input[value="1"]',
         'filterButton' : 'div[class="store__filters-filter"]',
         'avantGarde' : 'label[for="filter-genre-avant-garde"]',
         'applyButton' : 'button[class="linkbut_sm_tussock is-apply-button"]',
@@ -87,7 +88,7 @@ module.exports = {
         'bluray' : 'label[for="filter-format-blu-ray"]',
         'cartQuantityInput' : 'input[class="cart-quantity"]',
         'quantityUpdate' : 'button[name="update"]',
-        
+        'freeShipping' : 'p[class="cart_moremessage"]'
 
        
     }
